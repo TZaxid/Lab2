@@ -19,6 +19,16 @@ public class Main {
         g1.showStudents();
 
         Artist ar = new Artist(41, "vv", true, "10.5.2001");
-        ar.show();
+        Artist ar1 = new Artist(42, "lababa", false, "5.11.1991");
+//        ar.show();
+        Genres gn1 = new Genres(52, "Pop");
+        gn1.addArtist(ar);
+        gn1.addArtist(ar1);
+        gn1.showArtists();
+        gn1.addArtist(ar);
+        System.out.println(gn1.removeArtist(ar1));
+        System.out.println(gn1.isArtistPresent(ar1));
+
+
     }
 }
